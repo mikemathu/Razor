@@ -6,16 +6,12 @@
 block is opened with @{ and closed with }, and the statements it contains are evaluated when the view is 
 rendered.*@
 @{
- Layout = null; //null tells MVC that the view is self-contained and will render all the content required for the client
+	/*Layout = null*/; //null tells MVC that the view is self-contained and will render all the content required for the client
+	
+	//Applying Layout
+	Layout = "_BasicLayout";
+	ViewBag.Title = "Product Name";
 }
 
-<!DOCTYPE html>
-<html>
-	<head>
-		 <meta name="viewport" content="width=device-width" />
-		 <title>Index</title>
-	</head>
-	<body>
-		@Model.Namee
-	</body>
-</html>
+
+	Product Name is:	@Model.Name
