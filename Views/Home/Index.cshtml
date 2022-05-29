@@ -13,5 +13,5 @@ rendered.*@
 	ViewBag.Title = "Product Name";
 }
 
-
-	Product Name is:	@Model.Name
+	<p>Product Name is:	@Model.</p>
+	<p>Product Price: @($"{Model.Price:C2}")</p> @*View is responsible for formatting data sent to it by controller but not the action method*@
