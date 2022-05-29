@@ -1,9 +1,14 @@
 ﻿@*//Strongly typed view file: A view that uses the @model expression*@
 
 @model Product //model object declaration
+
+@*This is an example of a Razor code block, which allows me to include C# statements in a view. The code 
+block is opened with @{ and closed with }, and the statements it contains are evaluated when the view is 
+rendered.*@
 @{
- Layout = null;
+ Layout = null; //null tells MVC that the view is self-contained and will render all the content required for the client
 }
+
 <!DOCTYPE html>
 <html>
 	<head>
