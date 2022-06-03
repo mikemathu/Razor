@@ -13,8 +13,30 @@ rendered.*@
 	ViewBag.Title = "Product Name";
 }
 	<div data-productid="@Model.ProductID" data-stocklevel="@ViewBag.StockLevel"> @*Usingf lazor ecpression to set values for data attribute*@
-		<p>Product Name is:	@Model.</p>
+		<p>Product Name is:	@Model.Name</p>
 		<p>Product Price: @($"{Model.Price:C2}")</p> @*View is responsible for formatting data sent to it by controller but not the action method*@
-		<p>Stock Level: @ViewBag.StockLevel</p>
+		<p>Stock Level: 
+
+		@*	@switch(ViewBag.StockLevel){
+				case 0:
+					//@:Out of Stock //The @: Character prevent Razor from interpreting this as a C# statement
+					<p>Out of Stockk</p>
+					break;
+				case 1:
+				case 2: 
+				case 3:
+				//<b>Low Stock @ViewBag.StockLevel</b>
+					//@: @ViewBag.StockLevel is the stock level
+					<p>@ViewBag.StockLevel is stock level</p>
+					break;
+				default:
+					@: @ViewBag.StockLevel in Stock
+					break;
+
+			}*@
+
+
+
+		</p>
 	</div>
 	
