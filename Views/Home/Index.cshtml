@@ -12,7 +12,9 @@ rendered.*@
 	//Layout = "_BasicLayout"; //Removed after adding the value for the layout property
 	ViewBag.Title = "Product Name";
 }
-
-	<p>Product Name is:	@Model.</p>
-	<p>Product Price: @($"{Model.Price:C2}")</p> @*View is responsible for formatting data sent to it by controller but not the action method*@
-	<p>Stock Level: @ViewBag.StockLevel</p>
+	<div data-productid="@Model.ProductID" data-stocklevel="@ViewBag.StockLevel"> @*Usingf lazor ecpression to set values for data attribute*@
+		<p>Product Name is:	@Model.</p>
+		<p>Product Price: @($"{Model.Price:C2}")</p> @*View is responsible for formatting data sent to it by controller but not the action method*@
+		<p>Stock Level: @ViewBag.StockLevel</p>
+	</div>
+	
